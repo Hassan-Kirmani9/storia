@@ -8,6 +8,7 @@ import { ChevronRight } from 'lucide-react'
 import GlowingButton from "@/components/ui/glowing-button"
 import "./button.css"
 import MusicWaves from "@/components/MusicWaves"
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<number | null>(null)
@@ -21,8 +22,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#050211] text-white">
+      <Navbar />
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A103C] to-[#050211]" />
         <Image
           src="/bgimg.webp"
@@ -80,12 +82,10 @@ export default function Home() {
                 onHoverStart={() => setHoveredService(index)}
                 onHoverEnd={() => setHoveredService(null)}
               >
-                <div className={`bg-[#1A103C] border border-purple-500/20 rounded-lg p-6 transition-all duration-300 ${hoveredService === index ? 'shadow-glow' : ''}`}>
+                <div className={`bg-[#1A103C] border border-purple-500/20 rounded-lg p-6 transition-all duration-300 h-full ${hoveredService === index ? 'shadow-glow' : ''}`}>
                   <h3 className="text-2xl font-bold text-purple-400 mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <button className="w-full py-2 px-4 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors duration-300 flex items-center justify-center group">
-                    Learn More <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </button>
+
                 </div>
               </motion.div>
             ))}
@@ -97,7 +97,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-gradient-to-b from-[#0A0320] to-[#050211]">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 h-full bg-clip-text text-transparent"
             variants={fadeInUp}
           >
             Powerful AI Tools at Your Fingertips
@@ -150,7 +150,7 @@ export default function Home() {
 
       <MusicWaves />
       {/* Why Stoira Section */}
-   
+
 
       {/* Testimonials Section */}
 
@@ -174,7 +174,12 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full" />
+                <Image
+                  src="/logo.png"
+                  alt="Person listening to music"
+                  width={30}
+                  height={20}
+                />
                 <span className="font-bold text-xl">STOIRA</span>
               </div>
               <p className="text-gray-400">Unleashing AI Creativity for the Digital Era</p>
@@ -205,7 +210,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-purple-500/20 text-center text-gray-400">
-            <p>&copy; 2023 Stoira. All rights reserved.</p>
+            <p>&copy; 2024 Stoira. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -38,7 +38,7 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({ children }) => (
 
 const MusicWaves = () => {
   const circles = Array.from({ length: 10 }, (_, i) => ({
-    delay: i * 0.5,
+    delay: i * 2,
     scale: 1 + i * 0.6,
   }))
 

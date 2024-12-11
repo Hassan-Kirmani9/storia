@@ -15,7 +15,7 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({ children, className = '' 
     >
       <span className="relative z-10">{children}</span>
       <motion.div
-        className="absolute inset-0 bg-white opacity-25"
+        className="absolute inset-0 bg-blue-800 opacity-25"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1.5, opacity: 0.25 }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
