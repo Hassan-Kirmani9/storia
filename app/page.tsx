@@ -36,7 +36,7 @@ export default function Home() {
             Unleashing AI Creativity for the Digital Era
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
-            Stoira is a cutting-edge AI media house that blends technology and creativity to produce innovative and immersive experiences.
+            Stoira is a cutting-edge AI media house that blends technogy and creativity to produce innovative and immersive experiences.
           </p>
           <button className="button-64 mx-auto flex justify-center items-center text-center" role="button">
             <span className="text">Get Started</span>
