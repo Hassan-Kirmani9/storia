@@ -21,12 +21,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#050211] text-white">
       {/* Hero Section */}
-      <motion.section
-        className="relative h-screen flex items-center justify-center overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A103C] to-[#050211]" />
         <Image
           src="/bgimg.webp"
@@ -36,24 +31,18 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover opacity-30"
           priority
         />
-        <motion.div
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-        >
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
             Unleashing AI Creativity for the Digital Era
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
             Stoira is a cutting-edge AI media house that blends technology and creativity to produce innovative and immersive experiences.
           </p>
-
-          <button className="button-64 mx-auto flex justify-center  items-center text-center" role="button"><span className="text">Get Started</span></button>
-
-        </motion.div>
-      </motion.section>
-
+          <button className="button-64 mx-auto flex justify-center items-center text-center" role="button">
+            <span className="text">Get Started</span>
+          </button>
+        </div>
+      </section>
       {/* Services Section */}
       <section className="py-20 px-4 bg-[#0A0320]">
         <div className="max-w-7xl mx-auto">
@@ -197,7 +186,47 @@ export default function Home() {
         </div>
       </section>
 
-   
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-[#050211] to-[#0A0320]">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            variants={fadeInUp}
+          >
+            Trusted by Creatives, Innovators, and Brands Worldwide
+          </motion.h2>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={fadeInUp}
+          >
+            {[
+              {
+                quote: `Stoira's AI tools have revolutionized our filmmaking process. We're creating better content faster than ever before.`,
+                author: "Jane Doe, Independent Filmmaker",
+              },
+              {
+                quote: `The AI-driven ad creation platform saved us countless hours and delivered stunning results for our clients.`,
+                author: "John Smith, Creative Director",
+              },
+              {
+                quote: `Stoira's graphic audiobooks have taken our storytelling to a whole new level. Our listeners are hooked!`,
+                author: "Emily Brown, Audiobook Producer",
+              }
+
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-[#1A103C] border border-purple-500/20 rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-purple-400 font-semibold">{testimonial.author}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-[#0A0320]">
