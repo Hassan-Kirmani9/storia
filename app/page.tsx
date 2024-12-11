@@ -53,7 +53,7 @@ export default function Home() {
             Explore Our AI-Powered Offerings
           </motion.h2>
           <p className="text-center text-gray-400 mb-12">
-            Discover the possibilities with Stoira&apos;s suite of AI-powered services and products.
+            Discover the possibilities with Stoira&apos;s suite of AI-powered services and products
           </p>
           <motion.div
             className="grid md:grid-cols-3 gap-8"
