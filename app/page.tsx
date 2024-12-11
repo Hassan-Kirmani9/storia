@@ -48,6 +48,7 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-300 mb-8">
             Stoira is a cutting-edge AI media house that blends technology and creativity to produce innovative and immersive experiences.
           </p>
+
           <button className="button-64 mx-auto flex justify-center  items-center text-center" role="button"><span className="text">Get Started</span></button>
 
         </motion.div>
@@ -62,12 +63,9 @@ export default function Home() {
           >
             Explore Our AI-Powered Offerings
           </motion.h2>
-          <motion.p
-            className="text-center text-gray-400 mb-12"
-            variants={fadeInUp}
-          >
-            Discover the possibilities with Stoira's suite of AI-powered services and products.
-          </motion.p>
+          <p className="text-center text-gray-400 mb-12">
+            Discover the possibilities with Stoira&apos;s suite of AI-powered services and products.
+          </p>
           <motion.div
             className="grid md:grid-cols-3 gap-8"
             variants={fadeInUp}
