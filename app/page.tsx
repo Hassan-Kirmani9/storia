@@ -212,17 +212,18 @@ export default function Home() {
           >
             {[
               {
-                quote: "Stoira's AI tools have revolutionized our filmmaking process. We're creating better content faster than ever before.",
+                quote: `Stoira's AI tools have revolutionized our filmmaking process. We're creating better content faster than ever before.`,
                 author: "Jane Doe, Independent Filmmaker",
               },
               {
-                quote: "The AI-driven ad creation platform saved us countless hours and delivered stunning results for our clients.",
+                quote: `The AI-driven ad creation platform saved us countless hours and delivered stunning results for our clients.`,
                 author: "John Smith, Creative Director",
               },
               {
-                quote: "Stoira's graphic audiobooks have taken our storytelling to a whole new level. Our listeners are hooked!",
-                author: "Emily Brown, Audiobook Publisher",
-              },
+                quote: `Stoira's graphic audiobooks have taken our storytelling to a whole new level. Our listeners are hooked!`,
+                author: "Emily Brown, Audiobook Producer",
+              }
+
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
