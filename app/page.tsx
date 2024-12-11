@@ -197,47 +197,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[#050211] to-[#0A0320]">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-            variants={fadeInUp}
-          >
-            Trusted by Creatives, Innovators, and Brands Worldwide
-          </motion.h2>
-          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            variants={fadeInUp}
-          >
-            {[
-              {
-                quote: `Stoira's AI tools have revolutionized our filmmaking process. We're creating better content faster than ever before.`,
-                author: "Jane Doe, Independent Filmmaker",
-              },
-              {
-                quote: `The AI-driven ad creation platform saved us countless hours and delivered stunning results for our clients.`,
-                author: "John Smith, Creative Director",
-              },
-              {
-                quote: `Stoira's graphic audiobooks have taken our storytelling to a whole new level. Our listeners are hooked!`,
-                author: "Emily Brown, Audiobook Producer",
-              }
-
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="bg-[#1A103C] border border-purple-500/20 rounded-lg p-6 hover:shadow-glow transition-all duration-300">
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
-                  <p className="text-purple-400 font-semibold">{testimonial.author}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+   
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-[#0A0320]">
